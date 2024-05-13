@@ -15,19 +15,17 @@ function App() {
 
 
   // should not change the LOGIC inside this function - you can make changes to the function but logic should NOT change
-  const delayFunction = ()=> {
-    console.log("Delay Function Ran")
-    for(let index=0; index<LARGE_NUMBER; index++){};
-    return value+2;
-  
-  }
+  const delayFunction = () => {
+    if (value === 0) return 0; 
+    console.log("Delay Function Ran");
+    for (let index = 0; index < LARGE_NUMBER; index++) {};
+    return value + 2;
+  };
 
   // should not change the LOGIC inside this function - you can make changes to the function but logic should NOT change
-  const testFunction = ()=>{
-    return [value*3 ,value*4]
-  }
-
-  
+  const testFunction = () => {
+    return [value * 3, value * 4];
+  };
 
   // should not change this
   useEffect(()=>{
